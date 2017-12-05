@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "sqwhvqvr",
+    "password": "YeVJuHIUu0OsAMxkrLwdhxJ4FhNJZMK8",
+    "database": "sqwhvqvr",
+    "host": "baasu.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "sqwhvqvr",
+    "password": "YeVJuHIUu0OsAMxkrLwdhxJ4FhNJZMK8",
+    "database": "sqwhvqvr",
+    "host": "baasu.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "sqwhvqvr",
+    "password": "YeVJuHIUu0OsAMxkrLwdhxJ4FhNJZMK8",
+    "database": "sqwhvqvr",
+    "host": "baasu.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
