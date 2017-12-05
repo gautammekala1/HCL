@@ -1,0 +1,43 @@
+﻿    <div class="row">
+<div class="col-md-2"><a [routerLink]="['/home']" class="btn btn-link">Home</a></div>
+<div class="col-md-6"></div>
+<div class="col-md-4" id="logo" ><h4>Welcome to {{ userName }} <a  class="btn btn-link" (click)="logout()">logout</a></h4></div>
+</div>
+<br/>
+<div class="row">
+<div class="clearfix"></div>
+
+<div class="col-md-6 col-md-offset-3">
+    <h2>ADD TODO</h2>
+    <form name="form" (ngSubmit)="f.form.valid && addtodo()" #f="ngForm" novalidate>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" name="subject" [(ngModel)]="model.subject" #subject="ngModel" required />
+            <div *ngIf="f.submitted && !subject.valid" class="help-block">Subject Name is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="message">Message</label>
+            <input type="text" class="form-control" name="message" [(ngModel)]="model.message" #message="ngModel" required />
+            <div *ngIf="f.submitted && !message.valid" class="help-block">Message is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="message">Todo Date Time</label>
+            <input type="datetime-local" class="form-control" name="targetDate" [(ngModel)]="model.targetDate" #targetDate="ngModel"  />   
+        </div>                 
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" readonly />
+            
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !status.valid }">
+            <label for="status">status</label>
+            <input type="status" class="form-control" name="status" [(ngModel)]="model.status" #status="ngModel" readonly />
+           
+        </div>
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">Submit</button>
+            <a [routerLink]="['/home']" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>
+</div>
